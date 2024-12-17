@@ -1,0 +1,589 @@
+.build-page-container {
+  display: flex;
+  padding: 20px;
+  gap: 15px;
+  left: 50px;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+}
+
+.input-panel {
+  width: 22%;
+  padding: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow-y: auto;
+  max-height: 95vh;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-width: 2px;
+  border-color: #6b7280;
+  border-style: solid;
+  overflow-y: scroll;
+}
+.input-panel::-webkit-scrollbar {
+  display: none;
+}
+
+/* When sidebar is closed */
+.input-panel.closed {
+  left: 0;
+  width: 5%;
+  height: 3%;
+  padding: 1px;
+  justify-content: center;
+  align-items: center;
+  transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease;
+}
+
+.input-panel.open {
+  padding: 5px;
+  transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle-btn {
+  background-color: #f0f0f0;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: translate(5%, 15%);
+}
+
+/* Sidebar Header with Toggle */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.input-panel h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+/* Preview Panel Styling */
+.preview-panel {
+  width: 70%;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.preview-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.preview-panel::-webkit-scrollbar-thumb {
+  background-color: #d0d0d0;
+  border-radius: 4px;
+}
+
+.preview-panel::-webkit-scrollbar-track {
+  background: #f4f4f9;
+}
+
+/* A4 Page Styling */
+.a4-preview {
+  width: 210mm;
+  height: auto;
+  background-color: white;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  flex-wrap: wrap;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.a4-preview:nth-child(odd) {
+  background-color: white;
+}
+
+.a4-preview h1,
+.a4-preview h2,
+.a4-preview p {
+  margin: 0;
+}
+
+.profile-frames {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 10%;
+  border: 3px solid #f0f0f0;
+  overflow: hidden;
+  flex-shrink: 1;
+  transition: all 0.3s ease;
+  margin-left: auto;
+  margin-right: 0;
+  object-fit: cover;
+  position: relative;
+  top: 30px;
+}
+
+.profile-image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+.placeholder-text {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+}
+
+/* Section Styling */
+.section {
+  margin-bottom: 10px;
+}
+
+.section h2 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  border-top: 2px solid #e0e0e0;
+  padding-top: 5px;
+}
+
+/* Personal Info Section */
+.personal-info-section {
+  position: relative;
+  bottom: 130px;
+  justify-content: flex-start;
+  margin-bottom: -100px;
+}
+
+.personal-info-section h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.personal-info-section h2 {
+  font-size: 18px;
+  color: #666666;
+}
+
+.personal-information {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2px;
+  margin: 0 auto;
+}
+
+.personal-information p {
+  margin: 0;
+  font-size: 16px;
+  color: #2c3e50;
+  line-height: 1.5;
+}
+
+.personal-info-section .links-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.links-column span {
+  font-size: 14px;
+  color: blue;
+  text-decoration: underline;
+}
+
+/* Skills Section */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.skill-item {
+  font-size: 14px;
+  color: #333;
+  padding: 3px;
+  margin-bottom: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}
+
+.skill-duration {
+  font-style: italic;
+  color: #777;
+  margin-top: 5px;
+}
+
+.skill-description {
+  margin-top: 10px;
+  color: #555;
+}
+
+.experience-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.experience-item:hover {
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}
+
+.experience-duration {
+  font-style: italic;
+  color: #777;
+  margin-top: 5px;
+}
+
+.experience-description {
+  margin-top: 10px;
+  color: #555;
+}
+
+.project-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.project-item:hover {
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}
+
+.project-duration {
+  font-style: italic;
+  color: #777;
+  margin-top: 5px;
+}
+
+.project-description {
+  margin-top: 10px;
+  color: #555;
+}
+
+.education-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.education-item:hover {
+  background-color: #f4f4f4;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #0056b3;
+}
+
+.education-duration {
+  font-style: italic;
+  color: #777;
+  margin-top: 5px;
+}
+
+.education-description {
+  margin-top: 10px;
+  color: #555;
+}
+
+.download-pdf-btn {
+  padding: 10px 30px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.download-pdf-btn:hover {
+  background-color: transparent;
+  color: black;
+}
+
+/* Media Query: Tablet (767px - 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .build-page-container {
+    flex-direction: row;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .input-panel,
+  .preview-panel {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .a4-preview {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .profile-frames {
+    width: 120px;
+    height: 120px;
+    top: 50px;
+  }
+
+  .input-panel h2,
+  .preview-panel h1,
+  .preview-panel h2,
+  .preview-panel p {
+    font-size: 1rem;
+  }
+
+  .personal-info-section {
+    position: relative;
+    bottom: 100px;
+    justify-content: flex-start;
+    margin-bottom: -70px;
+    text-align: left;
+    padding-left: 20px;
+    padding-left: 15px;
+  }
+
+  .personal-info-section h1 {
+    font-size: 24px;
+  }
+
+  .personal-info-section h2 {
+    font-size: 16px;
+  }
+
+  .personal-information {
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .personal-information p {
+    font-size: 14px;
+  }
+
+  .links-column span {
+    font-size: 12px;
+  }
+}
+
+/* Media Query: Mobile Tablet (481px - 767px) */
+@media (max-width: 767px) and (min-width: 481px) {
+  .build-page-container {
+    flex-direction: column;
+    padding: 10px;
+    gap: 85px;
+  }
+
+  .input-panel,
+  .preview-panel {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .a4-preview {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .profile-frames {
+    width: 100px;
+    height: 100px;
+  }
+
+  .input-panel h2,
+  .preview-panel h1,
+  .preview-panel h2,
+  .preview-panel p {
+    font-size: 0.9rem;
+  }
+
+  .personal-info-section {
+    position: relative;
+    bottom: 90px;
+    justify-content: flex-start;
+    margin-bottom: -70px;
+    padding-left: 10px;
+  }
+
+  .personal-info-section h1 {
+    font-size: 20px;
+  }
+
+  .personal-info-section h2 {
+    font-size: 14px;
+  }
+
+  .personal-information {
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .personal-information p {
+    font-size: 12px;
+  }
+
+  .links-column span {
+    font-size: 12px;
+  }
+
+  .download-pdf-btn {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+}
+
+/* Media Query: Mobile (up to 480px) */
+@media (max-width: 480px) {
+  .build-page-container {
+    flex-direction: column;
+    padding: 5px;
+    gap: 80px;
+  }
+
+  .input-panel {
+    width: 100%;
+    padding: 8px;
+    gap: 10px;
+  }
+
+  .preview-panel {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .a4-preview {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .profile-frames {
+    width: 80px;
+    height: 80px;
+  }
+
+  .input-panel h2,
+  .preview-panel h1,
+  .preview-panel h2,
+  .preview-panel p {
+    font-size: 0.8rem;
+  }
+
+  .personal-info-section {
+    position: relative;
+    bottom: 60px;
+    justify-content: flex-start;
+    margin-bottom: -50px;
+    padding-left: 5px;
+  }
+
+  .personal-info-section h1 {
+    font-size: 18px;
+  }
+
+  .personal-info-section h2 {
+    font-size: 12px;
+  }
+
+  .personal-information {
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .personal-information p {
+    font-size: 10px;
+  }
+
+  .links-column span {
+    font-size: 10px;
+  }
+
+  .download-pdf-btn {
+    font-size: 0.8rem;
+    padding: 5px 15px;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 0.7rem;
+  }
+}

@@ -1,0 +1,202 @@
+.project-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: auto;
+  width: 100%;
+  max-width: 239px;
+  text-align: center;
+}
+
+.project-form-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #555;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.input-field {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: 2px solid green;
+}
+
+.resize-y {
+  resize: vertical;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.add-project-button,
+.update-project-button,
+.delete-project-button {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-project-button {
+  background-color: #019963;
+  color: white;
+}
+
+.add-project-button:hover {
+  background-color: #ffffff;
+  color: #019963;
+}
+
+.update-project-button {
+  background-color: #019963;
+  color: white;
+}
+
+.update-project-button:hover {
+  background-color: #0056b3;
+}
+
+.delete-project-button {
+  background-color: #019963;
+  color: white;
+}
+
+.delete-project-button:hover {
+  background-color: #b91c1c;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-item {
+  font-size: 1rem;
+  color: #333;
+  padding: 10px;
+  margin-left: 5px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+  animation: zoomBounce 0.8s ease-in-out;
+}
+
+.check-icon {
+  color: green;
+  background-color: rgba(0, 128, 0, 0.1);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.cross-icon {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.modal-message {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.modal-button {
+  background-color: #019963;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-button:hover {
+  background-color: transparent;
+  color: #019963;
+}
+
+@keyframes fadeIn {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes zoomBounce {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
